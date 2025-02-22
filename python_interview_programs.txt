@@ -1,0 +1,245 @@
+Top 50 Python Interview Programs with Solutions and Outputs
+
+--- Basic Programs ---
+
+1. Print "Hello, World!"
+----------------------------------------
+Code:
+print("Hello, World!")
+
+Output:
+Hello, World!
+
+2. Swap two numbers without a temporary variable
+----------------------------------------
+Code:
+a, b = 5, 10
+a, b = b, a
+print(a, b)
+
+Output:
+10 5
+
+3. Check if a number is even or odd
+----------------------------------------
+Code:
+num = int(input("Enter a number: "))
+print("Even" if num % 2 == 0 else "Odd")
+
+Input:
+4
+
+Output:
+Even
+
+4. Find the largest among three numbers
+----------------------------------------
+Code:
+a, b, c = 10, 20, 30
+print(max(a, b, c))
+
+Output:
+30
+
+5. Find the factorial of a number
+----------------------------------------
+Code:
+def factorial(n):
+    return 1 if n == 0 else n * factorial(n - 1)
+
+print(factorial(5))
+
+Output:
+120
+
+6. Check if a number is prime
+----------------------------------------
+Code:
+num = int(input("Enter a number: "))
+if num > 1 and all(num % i != 0 for i in range(2, int(num ** 0.5) + 1)):
+    print("Prime")
+else:
+    print("Not Prime")
+
+Input:
+7
+
+Output:
+Prime
+
+--- String Programs ---
+
+7. Reverse a string
+----------------------------------------
+Code:
+s = "hello"
+print(s[::-1])
+
+Output:
+olleh
+
+8. Check if a string is palindrome
+----------------------------------------
+Code:
+s = "madam"
+print("Palindrome" if s == s[::-1] else "Not Palindrome")
+
+Output:
+Palindrome
+
+9. Count vowels in a string
+----------------------------------------
+Code:
+s = "hello world"
+vowels = "aeiouAEIOU"
+count = sum(1 for char in s if char in vowels)
+print(count)
+
+Output:
+3
+
+10. Remove duplicate characters from a string
+----------------------------------------
+Code:
+s = "hello world"
+print("".join(dict.fromkeys(s)))
+
+Output:
+helo wrd
+
+--- List Programs ---
+
+11. Find the largest element in a list
+----------------------------------------
+Code:
+lst = [10, 20, 30, 40, 50]
+print(max(lst))
+
+Output:
+50
+
+12. Reverse a list
+----------------------------------------
+Code:
+lst = [1, 2, 3, 4, 5]
+print(lst[::-1])
+
+Output:
+[5, 4, 3, 2, 1]
+
+13. Find the sum of elements in a list
+----------------------------------------
+Code:
+lst = [1, 2, 3, 4, 5]
+print(sum(lst))
+
+Output:
+15
+
+14. Find the second largest number in a list
+----------------------------------------
+Code:
+lst = [10, 20, 4, 45, 99]
+print(sorted(set(lst))[-2])
+
+Output:
+45
+
+15. Find common elements between two lists
+----------------------------------------
+Code:
+lst1 = [1, 2, 3, 4, 5]
+lst2 = [4, 5, 6, 7, 8]
+print(list(set(lst1) & set(lst2)))
+
+Output:
+[4, 5]
+
+--- Tuple and Dictionary Programs ---
+
+16. Convert a list into a tuple
+----------------------------------------
+Code:
+lst = [1, 2, 3, 4, 5]
+print(tuple(lst))
+
+Output:
+(1, 2, 3, 4, 5)
+
+17. Find the frequency of elements in a list
+----------------------------------------
+Code:
+from collections import Counter
+lst = [1, 2, 2, 3, 3, 3, 4, 5]
+print(dict(Counter(lst)))
+
+Output:
+{1: 1, 2: 2, 3: 3, 4: 1, 5: 1}
+
+18. Merge two dictionaries
+----------------------------------------
+Code:
+dict1 = {"a": 1, "b": 2}
+dict2 = {"c": 3, "d": 4}
+dict1.update(dict2)
+print(dict1)
+
+Output:
+{'a': 1, 'b': 2, 'c': 3, 'd': 4}
+
+19. Sort a dictionary by values
+----------------------------------------
+Code:
+d = {"a": 3, "b": 1, "c": 2}
+print(dict(sorted(d.items(), key=lambda item: item[1])))
+
+Output:
+{'b': 1, 'c': 2, 'a': 3}
+
+20. Find the sum of dictionary values
+----------------------------------------
+Code:
+d = {"a": 1, "b": 2, "c": 3}
+print(sum(d.values()))
+
+Output:
+6
+
+--- More Complex Programs ---
+
+21. Fibonacci series using recursion
+----------------------------------------
+Code:
+def fibonacci(n):
+    if n <= 1:
+        return n
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+
+print([fibonacci(i) for i in range(10)])
+
+Output:
+[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+
+22. Find GCD of two numbers
+----------------------------------------
+Code:
+import math
+print(math.gcd(48, 18))
+
+Output:
+6
+
+23. Check if a year is a leap year
+----------------------------------------
+Code:
+year = 2024
+print("Leap Year" if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0) else "Not Leap Year")
+
+Output:
+Leap Year
+
+...
+
+(This list will continue up to 50 programs including searching, sorting, file handling, and OOP concepts.)
+
